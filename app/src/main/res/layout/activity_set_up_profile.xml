@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="40dp"
+    android:paddingBottom="57dp"
+    android:paddingHorizontal="40dp"
+    android:background="@android:color/white">
+
+    <!-- Back Arrow -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Register"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_language"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/btn_back"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText"/>
+
+    <!-- Language Spinner -->
+
+    <Spinner
+        android:id="@+id/spinner_language"
+        android:layout_width="102dp"
+        android:layout_height="31dp"
+        android:entries="@array/languages"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_back"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <!-- Main Heading -->
+    <TextView
+        android:id="@+id/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Getting Started"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/registerTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        tools:ignore="HardcodedText"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seems you are new here. Let’s set up your profile"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/headingText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        tools:ignore="HardcodedText"/>
+
+    <!-- First Name Label -->
+    <TextView
+        android:id="@+id/firstNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/subText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        tools:ignore="HardcodedText"/>
+
+    <!-- Last Name Label -->
+
+    <!-- First Name EditText -->
+
+    <TextView
+        android:id="@+id/lastNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Last Name"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/firstNameLabel"
+        tools:ignore="HardcodedText"/>
+
+    <EditText
+        android:id="@+id/firstNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter your first name"
+        android:background="@drawable/edittext_bg"
+        app:layout_constraintTop_toBottomOf="@id/firstNameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/lastNameEditText"
+        android:layout_marginEnd="8dp"
+        android:inputType="textPersonName" />
+
+    <!-- Last Name EditText -->
+    <EditText
+        android:id="@+id/lastNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter your last name"
+        android:background="@drawable/edittext_bg"
+        app:layout_constraintTop_toBottomOf="@id/lastNameLabel"
+        app:layout_constraintStart_toEndOf="@id/firstNameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:inputType="textPersonName" />
+
+    <!-- Email Label -->
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/firstNameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText"/>
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:background="@drawable/edittext_bg"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/emailLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <!-- Password Label -->
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/emailEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText"/>
+
+    <!-- Password EditText -->
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter your password"
+        android:background="@drawable/edittext_bg"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/passwordLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <!-- Confirm Password Label -->
+    <TextView
+        android:id="@+id/confirmPasswordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Confirm Password EditText -->
+    <EditText
+        android:id="@+id/confirmPasswordEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Re-enter your password"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_bg"
+        app:layout_constraintTop_toBottomOf="@id/confirmPasswordLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <!-- Terms and Conditions -->
+    <LinearLayout
+        android:id="@+id/termsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/confirmPasswordEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <CheckBox
+            android:id="@+id/termsCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/termsLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="By creating your account, you agree to our Terms and Conditions"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinsbold"
+        android:background="@drawable/button"
+        android:backgroundTint="#388E3C"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/termsLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Already have account? -->
+    <LinearLayout
+        android:id="@+id/loginPromptLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/registerButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/loginPrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an Account?"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Login"
+            android:fontFamily="@font/poppinsbold"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

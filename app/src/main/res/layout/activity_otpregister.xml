@@ -8,7 +8,7 @@
     android:paddingTop="40dp"
     android:paddingBottom="57dp"
     android:paddingHorizontal="40dp"
-    tools:context=".RegisterActivity"> <!-- Optional: Add your activity context -->
+    tools:context=".OTPregisterActivity"> <!-- Optional: Add your activity context -->
 
     <!-- Back Button -->
     <ImageView
@@ -36,7 +36,6 @@
         app:layout_constraintEnd_toStartOf="@+id/spinner_language"
         app:layout_constraintHorizontal_bias="0.709"
         app:layout_constraintStart_toEndOf="@+id/btn_back"
-
         app:layout_constraintTop_toTopOf="@id/btn_back"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText" />
@@ -58,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Let's Set Things Up"
+        android:text="Enter the Code we Sent to you"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,13 +67,13 @@
 
     <!-- Welcome Text -->
     <TextView
-        android:id="@+id/tv_welcome"
+        android:id="@+id/tv_verification"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinsregular"
         android:lineSpacingMultiplier="1.2"
-        android:text="Welcome to AgriLink! We'll begin by verifying your mobile number to \ncreate your profile."
+        android:text="A verification code was sent to your mobile number."
         android:textColor="#80000000"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,51 +83,54 @@
 
     <!-- Contact Number Label -->
     <TextView
-        android:id="@+id/tv_contact_label"
+        android:id="@+id/tv_otp_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/poppinsregular"
-        android:text="Contact Number"
+        android:text="Enter OTP Code"
         android:textColor="@android:color/black"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@id/tv_verification"
         tools:ignore="HardcodedText"/>
 
     <!-- Contact Number Input -->
     <EditText
-        android:id="@+id/et_phone"
+        android:id="@+id/tv_otp"
         android:layout_width="0dp"
         android:layout_height="53dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_bg"
-        android:fontFamily="@font/poppinssemibold"
-        android:hint="Enter Phone Number"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="Enter 8-digit Code"
+        android:textColorHint="#AAAAAA"
+        android:textColor="@color/black"
         android:inputType="phone"
         android:padding="16dp"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_contact_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_otp_label"
         tools:ignore="HardcodedText" />
 
     <!-- Send OTP Button -->
     <Button
-        android:id="@+id/btn_send_otp"
+        android:id="@+id/btn_verify_otp"
         android:layout_width="0dp"
         android:layout_height="53dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/button"
         android:backgroundTint="#388E3C"
         android:fontFamily="sans-serif"
-        android:text="Send OTP"
+        android:text="Verify"
+        android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_phone"
+        app:layout_constraintTop_toBottomOf="@id/tv_otp"
         tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

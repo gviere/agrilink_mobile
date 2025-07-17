@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.google.android.material.textfield.TextInputEditText
@@ -74,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun handleRegister() {
         // Create an Intent to start RegisterActivity
-        val intent = Intent(this, RegisterActivity::class.java)
+        val intent = Intent(this, RegisterPhoneNumberActivity::class.java)
         startActivity(intent)
     }
 }
